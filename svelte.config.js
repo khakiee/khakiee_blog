@@ -16,7 +16,7 @@ const config = {
 			strict: true
 		}),
 		paths: {
-			base: "khakiee.github.io"
+			base: dev ? '' : process.env.BASE_PATH,
 		}
 	}
 };
