@@ -1,5 +1,11 @@
 <script>
   import "../app.css";
+  import Footer from "../components/footer.svelte";
+  import Header from "../components/header.svelte";
 </script>
 
-<slot />
+<Header />
+<div class="container mx-auto min-h-screen">
+  <slot/>
+</div>
+<Footer />  
