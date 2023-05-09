@@ -41,15 +41,21 @@ Normal markdown stuff works too:
 And *this* and **THIS**. And other stuff. You can also use all your favorite Svelte features, like `each` blocks:
 - asdf
     - asdf
+      - asdf 
+        - asdf
     - asdf
       - asdf
         - asdf
+
 
 1. asdf
 1. asdf
 1. asdf
     1. asdf
     1. asdf
+        1. asdf
     1. asdf
+        1. asdf
+        1. asdf
 
 and all the other good Svelte stuff.

@@ -515,8 +515,6 @@
 
 .markdown-body p,
 .markdown-body blockquote,
-.markdown-body ul,
-.markdown-body ol,
 .markdown-body dl,
 .markdown-body table,
 .markdown-body pre,
@@ -1083,5 +1081,20 @@
 
 .markdown-body ul>li::before {
   content: "- ";
+}
+
+.markdown-body li>ol {
   margin-left: -20px;
+}
+
+.markdown-body ul>li {
+  margin-left: -20px;
+}
+
+.markdown-body>ul {
+  margin-bottom: 1em;
+}
+
+.markdown-body>ol {
+  margin-bottom: 1em;
 }
