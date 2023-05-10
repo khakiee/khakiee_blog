@@ -1,5 +1,6 @@
 # Svelte blog template
 
+![image](https://github.com/khakiee/khakiee_blog/assets/21821942/d0f03c70-a38b-4ed1-880f-79fee9ea3fec)
 
 This is a simple and minimalist blog template built using Svelte, This template provides an easy-to-use starting point for creating your own personal or professional blog.
 
