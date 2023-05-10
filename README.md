@@ -4,7 +4,7 @@
 
 This is a simple and minimalist blog template built using Svelte, This template provides an easy-to-use starting point for creating your own personal or professional blog.
 
-You can see examples [here](https://khakiee.github.io/posts/example-post)!
+You can see example [here](https://khakiee.github.io/)!
 
 ## Features
 
