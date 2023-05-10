@@ -16,11 +16,7 @@ This is a simple and minimalist blog template built using Svelte, This template 
 
 ### Installation
 
-1. Fork the repository:
-
-```
-git clone https://github.com/your-username/svelte-blog-template.git
-```
+1. Fork the repository
 
 2. Change env
 
