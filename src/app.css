@@ -1139,3 +1139,7 @@
 .markdown-body>ol {
   margin-bottom: 1em;
 }
+
+div.container.mx-auto.min-h-screen > ul > li > a {
+  max-width: 100vh;
+}

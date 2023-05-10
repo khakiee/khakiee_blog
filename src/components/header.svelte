@@ -16,8 +16,8 @@
   <DarkMode />
   <NavHamburger on:click={toggle} />
   <NavUl {hidden}>
-    <NavLi href="/" active={isActive('/')}>Home</NavLi>
-    <NavLi href="/about" active={isActive('/about')}>About</NavLi>
-    <NavLi href="/posts" active={isActive('/posts')}>Posts</NavLi>
+    <NavLi href="/">Home</NavLi>
+    <NavLi href="/about">About</NavLi>
+    <NavLi href="/posts">Posts</NavLi>
   </NavUl>
 </Navbar>

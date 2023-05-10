@@ -1,63 +1,59 @@
 import fss from 'fs'
 import fs from 'fs/promises'
 import yaml from 'js-yaml'
+import path from 'path'
 
-/** Meatadata of article */
-export type ArticleMeta = {
-  /** Article ID */
+
+export type PostMetaData = {
   id: string
-  /** Title */
   title: string
-  /** Published date as YYYY-MM-DD form */
   publishedAt: string
-  /** Modified datetime as ISO format */
   modifiedAt: string
-  /** Short summary in plain text */
   summary: string
-  /** Draft flag */
-  draft: boolean
+  thumbnail: string
 }
 
-/**
- * Extract metadata of all articles with the directory
- * @param dir A path
- * @returns Metadata of all articles
- */
-export async function getArticleMetas(dir: string): Promise<ArticleMeta[]> {
+export async function getPostMetadatas(dir: string): Promise<PostMetaData[]> {
   const promises = (await fs.readdir(dir))
     .filter(f => fss.existsSync(`${dir}/${f}/+page.md`))
-    .map(id => getArticleMeta(dir, id))
+    .map(id => getPostMetadata(dir, id))
   return (await Promise.all(promises)).sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1))
 }
 
-/**
- * Extract metadata from directory and article id
- * @param dir A path
- * @param id Article ID
- * @returns Metadata of article
- */
-export async function getArticleMeta(dir: string, id: string): Promise<ArticleMeta> {
+async function getPostMetadata(dir: string, id: string): Promise<PostMetaData> {
   const filepath = `${dir}/${id}/+page.md`
-  const f = await fs.readFile(filepath)
+  const markdown = (await fs.readFile(filepath)).toString()
   const mtime = (await fs.stat(filepath)).mtime
+  const thumbnail = await findFirstImage(`${dir}/${id}`)
 
-  return extractMeta(id, f.toString(), mtime)
-}
-
-/**
- * Extract metadata from markdown file.
- * @param id Article ID
- * @param markdown Raw markdown content
- * @returns Metadata of article
- */
-export function extractMeta(id: string, markdown: string, mtime: Date): ArticleMeta {
   const S = '---\n' // separator
   const raw = markdown.substring(S.length, markdown.indexOf(S, S.length)).trim()
   const frontmatter = yaml.load(raw) as Record<string, any>
   return {
     ...frontmatter,
+    thumbnail: thumbnail,
     id,
-    draft: !!frontmatter.draft,
-    modifiedAt: mtime.toISOString(),
-  } as ArticleMeta
+    modifiedAt: mtime.toISOString()
+  } as PostMetaData
+}
+
+async function findFirstImage(directory) {
+  return new Promise((resolve, reject) => {
+    fss.readdir(directory, (err, files) => {
+      if (err) {
+        reject(err);
+      } else {
+        for (const file of files) {
+          const filePath = path.join(directory, file);
+          const fileExtension = path.extname(filePath).toLowerCase();
+
+          if (['.jpg', '.jpeg', '.png', '.gif'].includes(fileExtension)) {
+            resolve(filePath);
+            break;
+          }
+        }
+        resolve(null);
+      }
+    });
+  });
 }
