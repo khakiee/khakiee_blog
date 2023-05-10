@@ -8,7 +8,7 @@
 
 <Navbar let:hidden let:toggle rounded color="dark" class=" min-w-fit dark:bg-gray-900">
   <NavBrand href="/">
-    <Avatar src="{profileUrl}" class="mr-3 h-6 sm:h-9" alt="avatar"/>
+    <Avatar src="{profileUrl}" class="mr-3 sm:h-9" alt="avatar"/>
     <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">{userName}</span>
   </NavBrand>
   <DarkMode />
