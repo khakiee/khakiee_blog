@@ -22,6 +22,7 @@ cat > "$article_path/$remarked_title/+page.md" << EOL
 title: $title
 summary: $summary
 publishedAt: $current_datetime
+thumbnail: 
 ---
 EOL
 

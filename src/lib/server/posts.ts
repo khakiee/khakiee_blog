@@ -1,7 +1,6 @@
 import fss from 'fs'
 import fs from 'fs/promises'
 import yaml from 'js-yaml'
-import path from 'path'
 
 
 export type PostMetaData = {
@@ -24,36 +23,13 @@ async function getPostMetadata(dir: string, id: string): Promise<PostMetaData> {
   const filepath = `${dir}/${id}/+page.md`
   const markdown = (await fs.readFile(filepath)).toString()
   const mtime = (await fs.stat(filepath)).mtime
-  const thumbnail = await findFirstImage(`${dir}/${id}`)
 
   const S = '---\n' // separator
   const raw = markdown.substring(S.length, markdown.indexOf(S, S.length)).trim()
   const frontmatter = yaml.load(raw) as Record<string, any>
   return {
     ...frontmatter,
-    thumbnail: thumbnail,
     id,
     modifiedAt: mtime.toISOString()
   } as PostMetaData
-}
-
-async function findFirstImage(directory) {
-  return new Promise((resolve, reject) => {
-    fss.readdir(directory, (err, files) => {
-      if (err) {
-        reject(err);
-      } else {
-        for (const file of files) {
-          const filePath = path.join(directory, file);
-          const fileExtension = path.extname(filePath).toLowerCase();
-
-          if (['.jpg', '.jpeg', '.png', '.gif'].includes(fileExtension)) {
-            resolve(filePath);
-            break;
-          }
-        }
-        resolve(null);
-      }
-    });
-  });
 }
