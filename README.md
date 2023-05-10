@@ -1,38 +1,74 @@
-# create-svelte
+# Svelte Blog Template
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This is a simple and minimalist blog template built using Svelte, This template provides an easy-to-use starting point for creating your own personal or professional blog.
 
-## Creating a project
+## Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+- Static Deployment via github pages
+- Responsive design for mobile and desktop devices
+- Easy customization and theming
+- Markdown support for blog posts
+  - code highlight is not supported for now
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Getting Started
 
-# create a new project in my-app
-npm create svelte@latest my-app
+### Installation
+
+1. Fork the repository:
+
+```
+git clone https://github.com/your-username/svelte-blog-template.git
 ```
 
-## Developing
+2. Change env
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+you should change `.env` file to set your informations
 
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+```
+USER_NAME=<your name>
+GITHUB_URL=<your github url>
+PROFILE_URL=<your profile avatar url>
+EMAIL=<your email>
 ```
 
-## Building
+3. run dev
 
-To create a production version of your app:
+`npm run dev`
+`yarn run dev`
 
-```bash
-npm run build
-```
+Now, you can open your browser and navigate to `http://localhost:3000` to see your blog up and running.
 
-You can preview the production build with `npm run preview`.
+## Customization
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+### Adding a New Blog Post
+
+`yarn run new`
+`npm run new`
+
+This command create new post to `articles/<title>`. all spaces of title will be replaced with `-` and will be used to filename.
+And also symbolic linked directory will created in `src/routes/posts/<title>`
+
+### Deleting a Post
+
+`yarn run delete`
+`npm run delete`
+
+### Theming and Styling
+
+You can easily customize the look and feel of your blog by modifying the styles in `src/app.css` directory.
+
+## !Deployment
+
+You should activate `.github/workflows/.deploy.yml` via remove `.` of deploy script.
+
+`mv .github/workflows/.deploy.yml .github/workflows/deploy.yml`
+
+And you can also customize your build.
+
+## TODO
+- [ ] Add highlight to code block
+- [ ] add home page
+- [ ] add about page
+- [ ] add ci pipeline
+
+Happy blogging!
