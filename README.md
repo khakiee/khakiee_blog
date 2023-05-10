@@ -26,10 +26,10 @@ git clone https://github.com/your-username/svelte-blog-template.git
 you should change `.env` file to set your informations
 
 ```
-USER_NAME=<your name>
-GITHUB_URL=<your github url>
-PROFILE_URL=<your profile avatar url>
-EMAIL=<your email>
+VITE_USER_NAME=<your name>
+VITE_GITHUB_URL=<your github url>
+VITE_PROFILE_URL=<your profile avatar url>
+VITE_EMAIL=<your email>
 ```
 
 3. run dev
