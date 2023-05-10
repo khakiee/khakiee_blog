@@ -1,10 +1,9 @@
 <script lang=ts>
   import { Footer, FooterCopyright, FooterLinkGroup, FooterLink } from 'flowbite-svelte'
-  import { env } from '$lib/env'
 
-  const userName = env.USER_NAME
-  const githubUrl = env.GITHUB_URL
-  const email = env.EMAIL
+  const userName = import.meta.env.VITE_USER_NAME
+  const githubUrl = import.meta.env.VITE_GITHUB_URL
+  const email = import.meta.env.VITE_EMAIL
 </script>
 
 <Footer class="dark:bg-gray-900">

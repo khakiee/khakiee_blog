@@ -1,10 +1,9 @@
 <script lang=ts>
   import { Avatar, DarkMode } from 'flowbite-svelte';
   import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte'
-  import { env } from '$lib/env'
 
-  const userName = env.USER_NAME
-  const profileUrl = env.PROFILE_URL
+  const userName = import.meta.env.VITE_USER_NAME
+  const profileUrl = import.meta.env.VITE_PROFILE_URL
 </script>
 
 <Navbar let:hidden let:toggle rounded color="dark" class=" min-w-fit dark:bg-gray-900">
