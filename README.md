@@ -38,7 +38,7 @@ VITE_EMAIL=<your email>
 
 You should activate `.github/workflows/.deploy.yml` via remove `.` of deploy script.
 
-`mv .github/workflows/.deploy.yml .github/workflows/deploy.yml`
+`mv .github/workflows/.deploy-example.yml .github/workflows/deploy.yml`
 
 And you can also customize your build.
 
