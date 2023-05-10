@@ -9,7 +9,7 @@
   <meta name="description" content={summary} />
 </svelte:head>
 
-<article class="markdown-body mx-auto">
+<article class="markdown-body">
   <h1>{title}</h1>
   <p>
     <time>{publishedAt}</time>

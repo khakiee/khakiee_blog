@@ -1143,3 +1143,13 @@
 div.container.mx-auto.min-h-screen > ul > li > a {
   max-width: 100vh;
 }
+
+#home-latest-post-card {
+  max-height: 30vh;
+
+  > img {
+    width:100%;
+    overflow:hidden;
+    object-fit: cover;
+  }
+}

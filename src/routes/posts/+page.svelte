@@ -1,6 +1,6 @@
 <script lang="ts">
   import Card from '../../components/card.svelte';
-import type { PageData } from './$types'
+  import type { PageData } from './$types'
 
   export let data: PageData
   let posts = data.posts
