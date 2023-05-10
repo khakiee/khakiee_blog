@@ -2,6 +2,7 @@
 title: example post
 summary: example, delete this, via yarn run delete
 publishedAt: 2023-05-10 15:21
+thumbnail: /asdf.png
 ---
 
 ## Good stuff in your markdown
