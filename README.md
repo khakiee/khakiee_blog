@@ -68,8 +68,10 @@ You can easily customize the look and feel of your blog by modifying the styles 
 
 ## TODO
 - [ ] Add highlight to code block
-- [ ] add home page
-- [ ] add about page
-- [ ] add ci pipeline
+- [ ] home page
+- [ ] about page
+- [ ] ci pipeline
+- [ ] pagenation
+- [ ] tag
 
 Happy blogging!
