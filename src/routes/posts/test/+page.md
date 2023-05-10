@@ -1,1 +1,0 @@
-../../../../static/articles/test.md

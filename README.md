@@ -1,4 +1,5 @@
-# Svelte Blog Template
+# Svelte blog template
+
 
 This is a simple and minimalist blog template built using Svelte, This template provides an easy-to-use starting point for creating your own personal or professional blog.
 

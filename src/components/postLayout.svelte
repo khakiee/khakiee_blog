@@ -1,7 +1,7 @@
 <script lang=ts>
-  export let title: string = ''
-  export let summary: string = ''
-  export let publishedAt: string = ''
+  export let title = ''
+  export let summary = ''
+  export let publishedAt = ''
 </script>
 
 <svelte:head>
