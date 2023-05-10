@@ -16,9 +16,9 @@ This is a simple and minimalist blog template built using Svelte, This template 
 
 ### Installation
 
-1. Fork the repository
+#### 1. Fork the repository
 
-2. Change env
+#### 2. Change env
 
 you should change `.env` file to set your informations
 
@@ -29,10 +29,18 @@ PROFILE_URL=<your profile avatar url>
 EMAIL=<your email>
 ```
 
-3. run dev
+#### 3. run dev
 
 `npm run dev`
 `yarn run dev`
+
+#### Deployment
+
+You should activate `.github/workflows/.deploy.yml` via remove `.` of deploy script.
+
+`mv .github/workflows/.deploy.yml .github/workflows/deploy.yml`
+
+And you can also customize your build.
 
 Now, you can open your browser and navigate to `http://localhost:3000` to see your blog up and running.
 
@@ -55,13 +63,6 @@ And also symbolic linked directory will created in `src/routes/posts/<title>`
 
 You can easily customize the look and feel of your blog by modifying the styles in `src/app.css` directory.
 
-## !Deployment
-
-You should activate `.github/workflows/.deploy.yml` via remove `.` of deploy script.
-
-`mv .github/workflows/.deploy.yml .github/workflows/deploy.yml`
-
-And you can also customize your build.
 
 ## TODO
 - [ ] Add highlight to code block
