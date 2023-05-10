@@ -67,8 +67,8 @@ You can easily customize the look and feel of your blog by modifying the styles 
 
 
 ## TODO
-- [ ] Add highlight to code block
-- [ ] home page
+- [x] Add highlight to code block
+- [x] home page
 - [ ] about page
 - [ ] ci pipeline
 - [ ] pagenation
