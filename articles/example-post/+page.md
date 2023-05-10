@@ -26,8 +26,10 @@ Yeah, thats right you can put wigdets in markdown (`.svx` files or otherwise). Y
 
 ### I wasn't joking
 
-```
-	This is real life
+```kotlin
+  fun asdf(st: String): Boolean{
+    return "zxcv"
+  }
 ```
 ![img](/favicon.png)
 
