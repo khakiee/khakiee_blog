@@ -1144,6 +1144,8 @@ div.container.mx-auto.min-h-screen > ul > li > a {
 
 #home-latest-post-card {
   max-height: 30vh;
+  max-width: 100%;
+  width: 100%;
 
   > img {
     width:100%;
