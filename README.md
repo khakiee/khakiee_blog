@@ -29,6 +29,7 @@ VITE_USER_NAME=<your name>
 VITE_GITHUB_URL=<your github url>
 VITE_PROFILE_URL=<your profile avatar url>
 VITE_EMAIL=<your email>
+VITE_BIO=<your bio>
 ```
 
 #### 3. run dev
@@ -55,6 +56,24 @@ Now, you can open your browser and navigate to `http://localhost:3000` to see yo
 
 This command create new post to `articles/<title>`. all spaces of title will be replaced with `-` and will be used to filename.
 And also symbolic linked directory will created in `src/routes/posts/<title>`
+
+### Image
+
+If you want to add images to post, locate it to `static/path/you/want` and use it like `/path/you/want`.
+
+### Thumbnail
+
+you can add thumbnail via generated markdown file. check example post.
+
+```md
+---
+title: your title
+summary: summary
+publishedAt: current datetime
+thumbnail: add thumbnail path here
+---
+
+```
 
 ### Deleting a Post
 
