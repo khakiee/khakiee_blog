@@ -24,9 +24,6 @@
 </div>
 
 <style lang="postcss">
-  :global(html) {
-    background-color: theme(colors.gray.100);
-  }
   @media (min-width: 640px) {
             .card-container {
                 height: 70vh;
