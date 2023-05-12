@@ -14,7 +14,7 @@
     <Card id="home-latest-post-card" href={`/posts/${post.id}`} img="{post.thumbnail}" size="xl" class="mt-5">
       <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{post.title}</h5>
       {#if post.summary}
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-300 leading-tight">
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-300 leading-tight overflow-hidden">
           {post.summary}
         </p>
       {/if}
@@ -23,4 +23,3 @@
       </p>
     </Card>
   {/each}
-</div>
