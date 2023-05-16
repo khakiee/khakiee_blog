@@ -6,7 +6,7 @@
   const bio = import.meta.env.VITE_BIO
 </script>
 
-<div class="flex flex-col items-center justify-center md:min-h-screen min-h-fit md:mt-0 mt-10 bg-gray-100 dark:bg-gray-800 dark:text-gray-200 text-gray-800">
+<div class="flex flex-col items-center justify-center md:min-h-screen min-h-fit md:mt-0 mt-10 dark:bg-gray-800 dark:text-gray-200 text-gray-800">
   <img class="w-56 h-56 rounded-full mb-4" src={profileImgUrl} alt={nickname} />
   <h1 class="text-4xl font-bold mb-6">{nickname}</h1>
   <p class="text-center text-gray-400 mb-4">{bio}</p>
