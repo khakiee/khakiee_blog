@@ -6,7 +6,7 @@
   const latestPosts = data.posts.slice(0, 10)
 </script>
 
-<div class="home-container container mx-auto">
+<div class="home-container container mx-auto mb-10">
   <p class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white mt-5">
     Latest posts
   </p>
